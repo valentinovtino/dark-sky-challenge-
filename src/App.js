@@ -26,6 +26,7 @@ import './css/App.css';
                    error: null, 
                    locationChecked : true  
                   });
+      this.setLocalStorage(location);
     })
     .catch(error => this.setState({ forecastObj: null,
                                     error: '404: Location Not Found',
@@ -34,7 +35,19 @@ import './css/App.css';
                                 );
   }
 
+  setLocalStorage(location) {
+    localStorage.setItem('location', location);
+  }
 
+  checkLocalStorage() {
+    if (window.localStorage.location && !this.state.locationChecked) {
+      this.getWeatherApi(window.localStorage.location); 
+    }
+  }
+
+  componentDidMount() {
+    this.checkLocalStorage();
+  }
 
   render() {
     return (

@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 
 
-class App extends Component {
+ export default class App extends Component {
+   constructor() {
+     super();
+     this.state = {
+       forecastObj: null, 
+       error: null,
+       locationChecked: false,
+     };
+   }
   render() {
     return (
-      <div className="App">
-        
+      <div className="app-background">
+        <p> Hello World </p>
       </div>
     );
   }
 }
 
-export default App;
+

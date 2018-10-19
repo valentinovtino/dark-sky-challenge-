@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import api from './helper/api.js';
-
+import Search from './Search.js';
 
  export default class App extends Component {
    constructor() {
@@ -29,8 +29,16 @@ import api from './helper/api.js';
 
   render() {
     return (
+
+      this.state.forecastObj ?
       <div className="app-background">
-        <p> Hello World </p>
+        <h1> DARK SKYES </h1>
+        <Search />
+      </div>
+
+      :
+      <div>
+        <p> ERROR </p>
       </div>
     );
   }

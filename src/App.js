@@ -50,7 +50,7 @@ import WelcomePage from './WelcomePage.js';
       <div className='current'>
         <CurrentWeather 
         latitude = {this.state.forecastObj.latitude}
-        lagitude = {this.state.forecastObj.longitude}
+        longitude = {this.state.forecastObj.longitude}
         timezone = {this.state.forecastObj.timezone}
         time = {this.state.forecastObj.currently.time}
         summary = {this.state.forecastObj.currently.summary}

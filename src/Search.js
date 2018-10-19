@@ -16,6 +16,8 @@ export default class Search extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        console.log(this.props)
+        this.props.getWeatherApi(this.state.latitude, this.state.longitude)
     }
 
     render() {

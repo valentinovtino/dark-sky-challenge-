@@ -10,10 +10,13 @@ import Search from './Search.js';
        error: null,
        locationChecked: false,
      };
+
+     this.getWeatherApi = this.getWeatherApi.bind(this);
+
    }
 
-  getWeatherApi() {
-    api.returnWeatherAPI()
+  getWeatherApi(latitude, longitude) {
+    api.returnWeatherAPI(latitude, longitude)
     .then(json => {
       this.setState({ forecastObj: json,
                    error: null, 
@@ -23,23 +26,23 @@ import Search from './Search.js';
     
   }
 
-   componentDidMount() {
-    this.getWeatherApi();
-   }
+  //  componentDidMount() {
+  //   this.getWeatherApi();
+  //  }
 
   render() {
     return (
 
-      this.state.forecastObj ?
+      // this.state.forecastObj ?
       <div className="app-background">
         <h1> DARK SKYES </h1>
-        <Search />
+        <Search getWeatherApi={this.getWeatherApi}/>
       </div>
 
-      :
-      <div>
-        <p> ERROR </p>
-      </div>
+      // :
+      // <div>
+      //   <p> ERROR </p>
+      // </div>
     );
   }
 }

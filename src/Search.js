@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './css/Search.css';
 
 export default class Search extends Component {
     constructor(props) {
@@ -28,13 +29,14 @@ export default class Search extends Component {
     }
 
     temperatureColor = () => {
-        var x = Math.floor(Math.random() * 256);
-        var y = Math.floor(Math.random() * 256);
-        var z = Math.floor(Math.random() * 256);
-        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-     console.log(bgColor);
+        const x = Math.floor(Math.random() * 256);
+        const y = Math.floor(Math.random() * 256);
+        const z = Math.floor(Math.random() * 256);
+        const bgColor = "rgb(" + x + "," + y + "," + z + ")";
+   
       
         document.body.style.background = bgColor;
+        document.getElementById('button').style.background = bgColor;
     }
     
    
@@ -57,7 +59,7 @@ export default class Search extends Component {
                     value={this.state.longitude}
                     name='longitude'
                     />
-                    <button>Submit</button>
+                    <button id='button'>Submit</button>
                 </form>
             </div>
         )

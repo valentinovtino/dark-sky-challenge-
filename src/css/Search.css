@@ -1,0 +1,21 @@
+form {
+    margin: 0 auto;
+    width: 40%; 
+}
+input {
+    width: 25%;
+    height: 40px;
+    font-size: large;
+    border: none;
+    border-left: 3px solid purple;
+}
+
+button {
+  width: 97px;
+  height: 52px;
+  border: 1px solid black;
+  font-size: 20px;
+  background-color: #e6e8fa;
+  color: black;
+  border-left: 2px solid #37363B;
+}

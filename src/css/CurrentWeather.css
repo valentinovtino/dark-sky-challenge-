@@ -1,0 +1,11 @@
+.location-info {
+    border: 3px solid black;
+    width: 35%;
+}
+
+.location-details {
+    border: 3px solid white;
+    margin: 0 auto;
+    width: 40%; 
+
+}

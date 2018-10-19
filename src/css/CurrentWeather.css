@@ -1,11 +1,51 @@
+@font-face {
+    font-family: title;
+    src: url(../fonts/chawp.ttf);
+  }
+
+h2, p {
+    margin: 0;
+    text-align: center;
+    padding: 1em;
+    color: white;
+    font-family: 'title';
+    letter-spacing: 2px;
+}
+.current-info {
+    height: 55em;
+    width: 91em;
+    background: url('../images/chalkboard.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 40%;
+    min-height: 100%;
+}
+
 .location-info {
-    border: 3px solid black;
-    width: 35%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5em;
+    font-size: x-large; 
+    margin:auto;
+}
+
+.location-position {
+    margin-top: 5px;
 }
 
 .location-details {
     border: 3px solid white;
     margin: 0 auto;
-    width: 40%; 
-
+    width: 40%;
+    background: url('../images/notepad.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 40%;
+    min-height: 100%; 
 }

@@ -44,7 +44,7 @@ import './css/App.css';
 
 
       <div className="app-background">
-        <h1 className='title'> DARK SKYES </h1>
+        <h1 className='welcome-title'> Enter Your Coordinates </h1>
         <Search getWeatherApi={this.getWeatherApi}/>
       </div>
 

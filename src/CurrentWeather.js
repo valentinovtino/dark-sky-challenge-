@@ -5,15 +5,12 @@ export default function CurrentWeather (props) {
     return (
         <div className='current-info'>
             <div className='location-info'>
-                <h1>Latitude: {props.latitude}</h1>
-                <h1>Longitude: {props.longitude}</h1>
-                <h1>TimeZone: {props.timezone}</h1>
-            </div>
-
-            <div className='location-details'>
+                <h2>Latitude: {props.latitude}° N</h2>
+                <h2>Longitude: {props.longitude}° E</h2>
+                <h2>TimeZone: {props.timezone}</h2>
                 <p>Time: {props.time}</p>
                 <p>Summary: {props.summary}</p>
-                <p>Temperature: {props.temperature}</p>
+                <p>Temperature: {props.temperature}°</p>
             </div>
         </div>
     )

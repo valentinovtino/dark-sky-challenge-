@@ -5,7 +5,7 @@ import './css/WelcomePage.css';
 export default function WelcomePage(props) {
     return (
         <header className='front-page'>
-            <h1 className='title'> Dark Skies </h1>
+            <h1 className='welcome-title'> Enter Your Coordinates </h1>
             <div className='submit-info'>
                 <Search getWeatherApi = {props.getWeatherApi} />
             </div>

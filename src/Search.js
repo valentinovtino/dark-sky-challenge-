@@ -47,14 +47,14 @@ export default class Search extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <input 
                     type='text'
-                    placeholder='enter latitude'
+                    placeholder='Enter Latitude'
                     onChange={this.handleInputChange}
                     value={this.state.latitude}
                     name='latitude'
                     />
                     <input 
                     type='text'
-                    placeholder='enter longitude'
+                    placeholder='Enter Longitude'
                     onChange={this.handleInputChange}
                     value={this.state.longitude}
                     name='longitude'

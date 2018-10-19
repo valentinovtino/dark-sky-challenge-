@@ -3,6 +3,7 @@ import api from './helper/api.js';
 import Search from './Search.js';
 import CurrentWeather from './CurrentWeather.js'
 import WelcomePage from './WelcomePage.js';
+import './css/App.css';
 
  export default class App extends Component {
    constructor() {

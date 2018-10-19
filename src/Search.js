@@ -23,7 +23,21 @@ export default class Search extends Component {
 
         
         this.props.getWeatherApi(location)
+        this.temperatureColor()
+
     }
+
+    temperatureColor = () => {
+        var x = Math.floor(Math.random() * 256);
+        var y = Math.floor(Math.random() * 256);
+        var z = Math.floor(Math.random() * 256);
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+     console.log(bgColor);
+      
+        document.body.style.background = bgColor;
+    }
+    
+   
 
     render() {
         return (

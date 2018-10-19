@@ -11,7 +11,7 @@ This project is a ReactJS app using the Dark Sky API, a user can search through 
 #### Link to Repo
 [Valentino's repo](https://github.com/valentinovtino/dark-sky-challenge-)
 
-From here clone, down the repo run `npm install` and get started. 
+From here, clone down the repo, run `npm install`, and get started. 
 
 
 ### *Example* 

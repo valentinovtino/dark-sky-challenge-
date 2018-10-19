@@ -54,13 +54,10 @@ import './css/App.css';
 
       this.state.forecastObj ?
      <div>
-
-
       <div className="app-background">
         <h1 className='welcome-title'> Enter Your Coordinates </h1>
         <Search getWeatherApi={this.getWeatherApi}/>
       </div>
-
       <div className='current'>
         <CurrentWeather 
         latitude = {this.state.forecastObj.latitude}
@@ -71,13 +68,11 @@ import './css/App.css';
         temperature = {this.state.forecastObj.currently.temperature}
         />
       </div>
-     
       </div>
          : 
 
          this.state.error ?
 
-        
          <div>
            <WelcomePage getWeatherApi = {this.getWeatherApi}/>
            <p className='error'>Error - City Not Found</p>

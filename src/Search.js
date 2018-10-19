@@ -39,8 +39,6 @@ export default class Search extends Component {
         document.getElementById('button').style.background = bgColor;
     }
     
-   
-
     render() {
         return (
             <div className='update-search'>

@@ -25,7 +25,6 @@ import api from './helper/api.js';
 
    componentDidMount() {
     this.getWeatherApi();
-    
    }
 
   render() {

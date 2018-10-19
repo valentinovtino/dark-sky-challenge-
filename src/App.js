@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import api from './helper/api.js';
 import Search from './Search.js';
 import CurrentWeather from './CurrentWeather.js'
+import WelcomePage from './WelcomePage.js';
 
  export default class App extends Component {
    constructor() {
@@ -64,13 +65,13 @@ import CurrentWeather from './CurrentWeather.js'
 
         
          <div>
-           <p>NOOOOOOO!</p>
+           <WelcomePage getWeatherApi = {this.getWeatherApi}/>
+           <p className='error'>Error - City Not Found</p>
          </div>
 
          :
 
-         <div>
-        </div>
+         <WelcomePage getWeatherApi = {this.getWeatherApi}/>
         
     )  
   }

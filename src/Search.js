@@ -14,10 +14,14 @@ export default class Search extends Component {
         this.setState({ [name]: value })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+    }
+
     render() {
         return (
             <div className='update-search'>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <input 
                     type='text'
                     placeholder='enter latitude'

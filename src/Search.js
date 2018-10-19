@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 
 export default class Search extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state ={
             latitude: '',
             longitude: ''
         }
+    }
+
+    handleInputChange = (event) => {
+        const { name, value } = event.target
+        this.setState({ [name]: value })
     }
 
     render() {
@@ -16,13 +21,15 @@ export default class Search extends Component {
                     <input 
                     type='text'
                     placeholder='enter latitude'
+                    onChange={this.handleInputChange}
                     value={this.state.latitude}
                     name='latitude'
                     />
                     <input 
                     type='text'
-                    placeholder='enter latitude'
-                    value={this.state.latitude}
+                    placeholder='enter longitude'
+                    onChange={this.handleInputChange}
+                    value={this.state.longitude}
                     name='longitude'
                     />
                     <button>Submit</button>

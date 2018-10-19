@@ -22,17 +22,22 @@ import CurrentWeather from './CurrentWeather.js'
       console.log(json)
       this.setState({ forecastObj: json,
                    error: null, 
-                   locationChecked: true  
+                   locationChecked : true  
                   });
     })
-    
+    .catch(error => this.setState({ forecastObj: null,
+                                    error: '404: Location Not Found',
+                                    locationChecked: true
+                                  }) 
+                                );
   }
+
 
 
   render() {
     return (
 
-      // this.state.forecastObj ?
+      this.state.forecastObj ?
      <div>
 
 
@@ -43,18 +48,31 @@ import CurrentWeather from './CurrentWeather.js'
 
       <div className='current'>
         <CurrentWeather 
-        latitude={this.state.forecastObj.latitude}
-        lagitude={this.state.forecastObj.longitude}
-        timezone={this.state.forecastObj.timezone}
-        time={this.state.forecastObj.currently.time}
-        summary={this.state.forecastObj.currently.summary}
-        temperature={this.state.forecastObj.currently.temperature}
+        latitude = {this.state.forecastObj.latitude}
+        lagitude = {this.state.forecastObj.longitude}
+        timezone = {this.state.forecastObj.timezone}
+        time = {this.state.forecastObj.currently.time}
+        summary = {this.state.forecastObj.currently.summary}
+        temperature = {this.state.forecastObj.currently.temperature}
         />
       </div>
-
-      
+     
       </div>
-    );
+         : 
+
+         this.state.error ?
+
+        
+         <div>
+           <p>NOOOOOOO!</p>
+         </div>
+
+         :
+
+         <div>
+        </div>
+        
+    )  
   }
 }
 

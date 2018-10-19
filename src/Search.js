@@ -6,7 +6,10 @@ export default class Search extends Component {
         this.state ={
             latitude: '',
             longitude: ''
-        }
+        };
+
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleInputChange = (event) => {
@@ -16,8 +19,10 @@ export default class Search extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(this.props)
-        this.props.getWeatherApi(this.state.latitude, this.state.longitude)
+        const location = `${this.state.latitude},${this.state.longitude}`
+
+        
+        this.props.getWeatherApi(location)
     }
 
     render() {

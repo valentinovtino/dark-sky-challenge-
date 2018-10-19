@@ -12,12 +12,13 @@ import Search from './Search.js';
      };
 
      this.getWeatherApi = this.getWeatherApi.bind(this);
-
    }
 
-  getWeatherApi(latitude, longitude) {
-    api.returnWeatherAPI(latitude, longitude)
+  getWeatherApi(location) {
+  
+    api.returnWeatherAPI(location)
     .then(json => {
+      console.log(json)
       this.setState({ forecastObj: json,
                    error: null, 
                    locationChecked: true  
@@ -26,9 +27,6 @@ import Search from './Search.js';
     
   }
 
-  //  componentDidMount() {
-  //   this.getWeatherApi();
-  //  }
 
   render() {
     return (
